@@ -9,6 +9,11 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
    let bar_spacing = height / 10;
    let bar_height = width / 12;
    let bar_pos_x = width / 2;
+
+   let ballSize = 40;
+
+   fill(0);
+   ellipse(width/2,drum,ballSize);
  
 
    // vocal bar is red
