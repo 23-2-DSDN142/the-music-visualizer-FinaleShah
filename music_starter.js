@@ -21,7 +21,6 @@ if(firstRun){
 
 }
 
-
 let pFrame = map(drum, 0, 100, 0, 3);
 
 if (drum <= 40){
@@ -37,12 +36,9 @@ push();
 scale(0.3);
 image(pearl[pFrame], width, height/2.5);
 
-
 fill(174, 179, 242); 
 
-
 let ballSize  = map(bass, 0, 100, 0, 50);
-//scale(1);
 
 strokeWeight(0);
  ellipse(600, 300 ,ballSize*1.2); // stars mapped to the vocals | brighter stars
