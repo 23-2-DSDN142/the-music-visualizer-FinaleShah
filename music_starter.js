@@ -8,15 +8,8 @@ let pearl = [];
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
   background(113, 106, 189);
  
- 
-  
   fill(79, 69, 99); // ground 
-  //rect(700,1200, 3000,1000);
   ellipse(700,1100, 3000,1000);
- 
-
-
-
  
 if(firstRun){
 
@@ -48,11 +41,11 @@ image(pearl[pFrame], width, height/2.5);
 fill(174, 179, 242); 
 
 
-let ballSize  = map(vocal, 0, 100, 0, 50);
+let ballSize  = map(bass, 0, 100, 0, 50);
 //scale(1);
 
 strokeWeight(0);
- ellipse(600, 300 ,ballSize*1.2); // stars mapped to the vocals
+ ellipse(600, 300 ,ballSize*1.2); // stars mapped to the vocals | brighter stars
  ellipse(900, 400 ,ballSize*1);
  ellipse(450, 200 ,ballSize);
  ellipse(250, 400 ,ballSize*1.2);
@@ -65,7 +58,7 @@ strokeWeight(0);
  ellipse(2000, 400 ,ballSize*1);
  ellipse(100, 800 ,ballSize*1);
 
- fill(136, 139, 191);
+ fill(136, 139, 191);  // darker stars 
  ellipse(1200, 700 ,ballSize*0.4);
  ellipse(2500, 500 ,ballSize*1.3);
  ellipse(3400, 750 ,ballSize*1.3);
@@ -80,8 +73,6 @@ strokeWeight(0);
  ellipse(1400, 1200 ,ballSize*1);
  ellipse(2100, 1200 ,ballSize*1.3);
  ellipse(3800, 900 ,ballSize*1.38);
-
-//let moonSize = map(bass, 0, 50, 0, 50);
 
  fill(227, 217, 250); // moon 
  ellipse(820, 400, 600, 600);
@@ -105,6 +96,5 @@ strokeWeight(0);
  ellipse(4000, 1000, 600,400);
  ellipse(4400, 1000, 600,400);
  ellipse(4300, 800, 600,500);
-
 
 }
