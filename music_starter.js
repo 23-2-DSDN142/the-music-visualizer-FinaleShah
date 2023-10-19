@@ -6,8 +6,18 @@ let pearl = [];
 
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  background(131, 109, 191);
+  background(113, 106, 189);
+ 
+ 
   
+  fill(79, 69, 99); // ground 
+  //rect(700,1200, 3000,1000);
+  ellipse(700,1100, 3000,1000);
+ 
+
+
+
+ 
 if(firstRun){
 
   rectMode(CENTER);
@@ -18,66 +28,83 @@ if(firstRun){
 
 }
 
-let pFrame = int(map(drum, 0, 100, 0, 3));
 
-let width = 100;
+let pFrame = map(drum, 0, 100, 0, 3);
+
+if (drum <= 40){
+
+  pFrame = 0;
+}
+else {
+  pFrame = 1;
+}
 
 console.log(pFrame);
 push();
 scale(0.3);
-image(pearl[pFrame], width/2, height/2);
+image(pearl[pFrame], width, height/2.5);
 
 
-// fill(255);
-// ellipse(100,100,100,100);
-
-// let 
-
-  }
+fill(174, 179, 242); 
 
 
+let ballSize  = map(vocal, 0, 100, 0, 50);
+//scale(1);
+
+strokeWeight(0);
+ ellipse(600, 300 ,ballSize*1.2); // stars mapped to the vocals
+ ellipse(900, 400 ,ballSize*1);
+ ellipse(450, 200 ,ballSize);
+ ellipse(250, 400 ,ballSize*1.2);
+ ellipse(3000, 1200 ,ballSize);
+ ellipse(2000, 100 ,ballSize*1);
+ ellipse(1500, 300 ,ballSize*1.1);
+ ellipse(3500, 150 ,ballSize*1.2);
+ ellipse(3200, 50 ,ballSize*1.3);
+ ellipse(3900, 800 ,ballSize*1.1);
+ ellipse(2000, 400 ,ballSize*1);
+ ellipse(100, 800 ,ballSize*1);
+
+ fill(136, 139, 191);
+ ellipse(1200, 700 ,ballSize*0.4);
+ ellipse(2500, 500 ,ballSize*1.3);
+ ellipse(3400, 750 ,ballSize*1.3);
+ ellipse(3800, 100 ,ballSize*1.35);
+ ellipse(2200, 500 ,ballSize);
+ ellipse(1500, 800 ,ballSize*1.3);
+ ellipse(600, 1000 ,ballSize*0.4);
+ ellipse(500, 1500 ,ballSize*1.3);
+ ellipse(800, 1300 ,ballSize*1.3);
+ ellipse(250, 1100 ,ballSize*1.3);
+ ellipse(1800, 1500 ,ballSize*1);
+ ellipse(1400, 1200 ,ballSize*1);
+ ellipse(2100, 1200 ,ballSize*1.3);
+ ellipse(3800, 900 ,ballSize*1.38);
+
+//let moonSize = map(bass, 0, 50, 0, 50);
+
+ fill(227, 217, 250); // moon 
+ ellipse(820, 400, 600, 600);
+ fill(247, 245, 252);
+ ellipse(800, 400, 600, 600);
+
+ fill(126, 116, 207);        // lighter clouds 
+ ellipse(3000, 100, 600,300);
+ ellipse(3400, 100, 600,400);
+ ellipse(3200, 30, 400,500);
+
+ ellipse(30, 1200, 600,400);
+ ellipse(40, 1200, 600,400);
+ ellipse(20, 1000, 600,500);
+ 
+ fill(144, 135, 214);        // darker clouds 
+ ellipse(1000, 500, 400,300);
+ ellipse(1400, 500, 500,400);
+ ellipse(1200, 400, 500,500);
+
+ ellipse(4000, 1000, 600,400);
+ ellipse(4400, 1000, 600,400);
+ ellipse(4300, 800, 600,500);
 
 
-// textFont('Helvetica'); // please use CSS safe fonts
-// rectMode(CENTER)
-// textSize(24);
-
-//  let bar_spacing = height / 10;
-//  let bar_height = width / 12;
-//  let bar_pos_x = width / 2;
-
-//  let ballSize = 40;
-
-//  fill(0);
-//  ellipse(width/2,drum,ballSize);
-
-
-//  // vocal bar is red
-//  fill(200, 0, 0);
-//  rect(bar_pos_x, height / 2 + 1 * bar_spacing, 4 * vocal, bar_height);
-//  fill(0);
-//  text("vocals", bar_pos_x, height / 2 + 1 * bar_spacing + 8);
-
-//  // drum bar is green
-//  fill(0, 200, 0);
-//  rect(bar_pos_x, height / 2 + 2 * bar_spacing, 4 * drum, bar_height);
-//  fill(0);
-//  text("drums", bar_pos_x, height / 2 + 2 * bar_spacing + 8);
-
-//  // bass bar is blue
-//  fill(50, 50, 240);
-//  rect(bar_pos_x, height / 2 + 3 * bar_spacing, 4 * bass, bar_height);
-//  fill(0);
-//  text("bass", bar_pos_x, height / 2 + 3 * bar_spacing + 8);
-
-//  // other bar is white
-//  fill(200, 200, 200);
-//  rect(bar_pos_x, height / 2 + 4 * bar_spacing, 4 * other, bar_height);
-//  fill(0);
-//  text("other", bar_pos_x, height / 2 + 4 * bar_spacing + 8);
-//  fill(255, 255, 0);
-
-//  // display "words"
-//  textAlign(CENTER);
-//  textSize(vocal);
-//  text(words, width/2, height/3);
+}
